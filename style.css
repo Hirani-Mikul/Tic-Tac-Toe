@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(226, 226, 226);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#overlay {
+  position: absolute;
+  background-color: grey;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  transition: height 200ms ease-in-out;
+}
+.hide {
+  height: 0%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+.show {
+  height: 100%;
+  z-index: 1;
+  visibility: visible;
+  opacity: 0.96;
+}
+#result-box {
+  background-color: rgb(165, 165, 165);
+  border-radius: 10px;
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#message {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+#btn {
+  /* margin-top: auto; */
+  /* margin-bottom: 80px; */
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-size: 24px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.hot-bar {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  font-size: 24px;
+  justify-content: space-around;
+}
+.hot-bar h3 {
+  display: inline;
+  margin: 0;
+}
+.grid-container {
+  align-self: center;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.cell {
+  margin: 0;
+  padding: 0;
+  border: 1px solid white;
+  background-color: blue;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  user-select: none;
+}
+.cell.marked {
+  background-color: rgb(58, 58, 245);
+}
+.cell:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
